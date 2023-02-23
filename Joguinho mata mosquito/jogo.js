@@ -3,7 +3,7 @@
 var altura = 0
 var largura= 0 
 var vidas = 1
-var tempo = 20
+var tempo = 15
 
 function aajustaTamanhoPalcojogo(){
    altura = window.innerHeight
@@ -20,7 +20,7 @@ var cronometro = setInterval(function(){
     if(tempo <0){
         clearInterval(cronometro)
         clearInterval(criaMosquito)
-        alert('vitoria')
+        window.location.href = 'vitoria.html' 
 
     } else{
     document.getElementById('cronometro').innerHTML = tempo
@@ -46,7 +46,7 @@ function posicaoRandomica(){
 }
     }
 
-var posicaoX= Math.floor(Math.random() * largura) - 90
+var posicaoX= Math.floor(Math.random() * largura) - 90 // math.floor vai arredondar o localizador da tela 
 var posicaoY= Math.floor(Math.random() * altura) - 90
 
 // operador ternario para evitar que o mosquito desapareça da tela
